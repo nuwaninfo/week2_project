@@ -83,8 +83,8 @@ class VehicleService<T> {
     
 }
 
-const cars = new VehicleService
-const boats = new VehicleService
+const cars = new VehicleService<ICar>
+const boats = new VehicleService<IBoat>
 
 cars.add(car)
 boats.add(boat)
