@@ -32,3 +32,21 @@ let boat = {
 console.log(car);
 console.log(plane);
 console.log(boat);
+class VehicleService {
+    items;
+    constructor() {
+        this.items = [];
+    }
+    add(vehicle) {
+        this.items.push(vehicle);
+    }
+    list() {
+        return this.items;
+    }
+}
+const cars = new VehicleService;
+const boats = new VehicleService;
+cars.add(car);
+boats.add(boat);
+console.log(cars.list());
+console.log(boats.list());
