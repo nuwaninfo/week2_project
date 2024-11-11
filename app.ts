@@ -64,3 +64,27 @@ let boat: IBoat = {
 console.log(car)
 console.log(plane)
 console.log(boat)
+
+class VehicleService<T> {
+    private items: Array<T>
+
+    public constructor() {
+        this.items = []
+    }
+
+    public add(vehicle: T) {
+        this.items.push(vehicle)
+    }
+
+    public list<T>() {
+        return this.items
+    }
+
+    
+}
+
+const cars = new VehicleService
+const boats = new VehicleService
+
+cars.add(car)
+boats.add(boat)
